@@ -1,0 +1,15 @@
+E:\UserData\Visual Studio\C#\MyQRCode\MyQRCode\bin\Debug\MyQRCode.exe.config
+E:\UserData\Visual Studio\C#\MyQRCode\MyQRCode\bin\Debug\MyQRCode.exe
+E:\UserData\Visual Studio\C#\MyQRCode\MyQRCode\bin\Debug\MyQRCode.pdb
+E:\UserData\Visual Studio\C#\MyQRCode\MyQRCode\bin\Debug\QRCoder.dll
+E:\UserData\Visual Studio\C#\MyQRCode\MyQRCode\obj\Debug\MyQRCode.csproj.AssemblyReference.cache
+E:\UserData\Visual Studio\C#\MyQRCode\MyQRCode\obj\Debug\MyQRCode.csproj.SuggestedBindingRedirects.cache
+E:\UserData\Visual Studio\C#\MyQRCode\MyQRCode\obj\Debug\MyQRCode.Properties.Resources.resources
+E:\UserData\Visual Studio\C#\MyQRCode\MyQRCode\obj\Debug\MyQRCode.csproj.GenerateResource.cache
+E:\UserData\Visual Studio\C#\MyQRCode\MyQRCode\obj\Debug\MyQRCode.csproj.CoreCompileInputs.cache
+E:\UserData\Visual Studio\C#\MyQRCode\MyQRCode\obj\Debug\MyQRCode.csproj.CopyComplete
+E:\UserData\Visual Studio\C#\MyQRCode\MyQRCode\obj\Debug\MyQRCode.exe
+E:\UserData\Visual Studio\C#\MyQRCode\MyQRCode\obj\Debug\MyQRCode.pdb
+E:\UserData\Visual Studio\C#\MyQRCode\MyQRCode\obj\Debug\MyQRCode.QRCWnd.resources
+E:\UserData\Visual Studio\C#\MyQRCode\MyQRCode\obj\Debug\MyQRCode.QRCWndIcon.resources
+E:\UserData\Visual Studio\C#\MyQRCode\MyQRCode\obj\Debug\MyQRCode.QRCWndImage.resources

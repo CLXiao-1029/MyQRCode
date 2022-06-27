@@ -205,7 +205,7 @@ namespace MyQRCode
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            numUpDown_reqVer.Enabled = cBox_Auto.Checked;
+            numUpDown_reqVer.Enabled = !cBox_Auto.Checked;
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)

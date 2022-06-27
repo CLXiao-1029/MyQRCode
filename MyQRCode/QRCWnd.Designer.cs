@@ -1,4 +1,4 @@
-﻿namespace MyQRCode
+namespace MyQRCode
 {
     partial class QRCWnd
     {
@@ -51,6 +51,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.ccBox_lightColor = new MyQRCode.ColorComboBox();
+            this.cBox_Auto = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDown_reqVer)).BeginInit();
             this.SuspendLayout();
@@ -78,7 +79,7 @@
             // 
             // numUpDown_reqVer
             // 
-            this.numUpDown_reqVer.Location = new System.Drawing.Point(360, 11);
+            this.numUpDown_reqVer.Location = new System.Drawing.Point(348, 11);
             this.numUpDown_reqVer.Maximum = new decimal(new int[] {
             40,
             0,
@@ -121,7 +122,7 @@
             "7",
             "8",
             "9"});
-            this.cBox_pixel.Location = new System.Drawing.Point(360, 37);
+            this.cBox_pixel.Location = new System.Drawing.Point(348, 37);
             this.cBox_pixel.Name = "cBox_pixel";
             this.cBox_pixel.Size = new System.Drawing.Size(44, 20);
             this.cBox_pixel.TabIndex = 5;
@@ -129,7 +130,7 @@
             // cBox_drawQuietZones
             // 
             this.cBox_drawQuietZones.AutoSize = true;
-            this.cBox_drawQuietZones.Location = new System.Drawing.Point(360, 62);
+            this.cBox_drawQuietZones.Location = new System.Drawing.Point(348, 62);
             this.cBox_drawQuietZones.Name = "cBox_drawQuietZones";
             this.cBox_drawQuietZones.Size = new System.Drawing.Size(15, 14);
             this.cBox_drawQuietZones.TabIndex = 6;
@@ -139,7 +140,7 @@
             // 
             this.cBox_eccLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBox_eccLevel.FormattingEnabled = true;
-            this.cBox_eccLevel.Location = new System.Drawing.Point(360, 81);
+            this.cBox_eccLevel.Location = new System.Drawing.Point(348, 81);
             this.cBox_eccLevel.Name = "cBox_eccLevel";
             this.cBox_eccLevel.Size = new System.Drawing.Size(44, 20);
             this.cBox_eccLevel.TabIndex = 7;
@@ -175,7 +176,7 @@
             // cBox_forceUtf8
             // 
             this.cBox_forceUtf8.AutoSize = true;
-            this.cBox_forceUtf8.Location = new System.Drawing.Point(360, 106);
+            this.cBox_forceUtf8.Location = new System.Drawing.Point(348, 106);
             this.cBox_forceUtf8.Name = "cBox_forceUtf8";
             this.cBox_forceUtf8.Size = new System.Drawing.Size(15, 14);
             this.cBox_forceUtf8.TabIndex = 8;
@@ -194,7 +195,7 @@
             // cBox_utf8BOM
             // 
             this.cBox_utf8BOM.AutoSize = true;
-            this.cBox_utf8BOM.Location = new System.Drawing.Point(360, 125);
+            this.cBox_utf8BOM.Location = new System.Drawing.Point(348, 125);
             this.cBox_utf8BOM.Name = "cBox_utf8BOM";
             this.cBox_utf8BOM.Size = new System.Drawing.Size(15, 14);
             this.cBox_utf8BOM.TabIndex = 9;
@@ -204,7 +205,7 @@
             // 
             this.cBox_eciMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBox_eciMode.FormattingEnabled = true;
-            this.cBox_eciMode.Location = new System.Drawing.Point(360, 144);
+            this.cBox_eciMode.Location = new System.Drawing.Point(348, 144);
             this.cBox_eciMode.Name = "cBox_eciMode";
             this.cBox_eciMode.Size = new System.Drawing.Size(76, 20);
             this.cBox_eciMode.TabIndex = 10;
@@ -262,7 +263,7 @@
             this.ccBox_darkColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ccBox_darkColor.FormattingEnabled = true;
             this.ccBox_darkColor.ItemHeight = 16;
-            this.ccBox_darkColor.Location = new System.Drawing.Point(360, 169);
+            this.ccBox_darkColor.Location = new System.Drawing.Point(348, 169);
             this.ccBox_darkColor.Name = "ccBox_darkColor";
             this.ccBox_darkColor.Size = new System.Drawing.Size(76, 22);
             this.ccBox_darkColor.TabIndex = 11;
@@ -291,17 +292,30 @@
             this.ccBox_lightColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ccBox_lightColor.FormattingEnabled = true;
             this.ccBox_lightColor.ItemHeight = 16;
-            this.ccBox_lightColor.Location = new System.Drawing.Point(360, 196);
+            this.ccBox_lightColor.Location = new System.Drawing.Point(348, 196);
             this.ccBox_lightColor.Name = "ccBox_lightColor";
             this.ccBox_lightColor.SelectedColor = System.Drawing.Color.White;
             this.ccBox_lightColor.Size = new System.Drawing.Size(76, 22);
             this.ccBox_lightColor.TabIndex = 12;
             // 
+            // cBox_Auto
+            // 
+            this.cBox_Auto.AutoSize = true;
+            this.cBox_Auto.Location = new System.Drawing.Point(396, 14);
+            this.cBox_Auto.Name = "cBox_Auto";
+            this.cBox_Auto.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cBox_Auto.Size = new System.Drawing.Size(48, 16);
+            this.cBox_Auto.TabIndex = 23;
+            this.cBox_Auto.Text = "自动";
+            this.cBox_Auto.UseVisualStyleBackColor = true;
+            this.cBox_Auto.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // QRCWnd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 353);
+            this.ClientSize = new System.Drawing.Size(451, 353);
+            this.Controls.Add(this.cBox_Auto);
             this.Controls.Add(this.ccBox_lightColor);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -360,6 +374,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private ColorComboBox ccBox_lightColor;
+        private System.Windows.Forms.CheckBox cBox_Auto;
     }
 }
 

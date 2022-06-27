@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -50,6 +50,7 @@ namespace MyQRCode
                 INIOperatorSys.Write(cfg_full_path, "Icon", "BorderCol", Color.White.ToHexValue());
             }
             numUpDown_reqVer.Value = INIOperatorSys.Read(cfg_full_path, "Config", "requestedVersion", 0);
+            cBox_Auto.Checked = INIOperatorSys.Read(cfg_full_path, "Config", "reqVersionAuto", false);
             cBox_pixel.SelectedIndex = INIOperatorSys.Read(cfg_full_path, "Config", "pixelsPerModule", 0) ;
             
             string darkColor = INIOperatorSys.Read(cfg_full_path, "Config", "darkColor", Color.Black.ToHexValue());
@@ -85,9 +86,10 @@ namespace MyQRCode
 
         private void CreateQRC(bool is_save = false)
         {
+            int reqVer = cBox_Auto.Checked ? -1 : (int)numUpDown_reqVer.Value;
             qrcImage = Encoder.code(
                 textBox1.Text,
-                (int)numUpDown_reqVer.Value,
+                reqVer,
                 cBox_pixel.SelectedIndex + 1,
                 ccBox_darkColor.SelectedColor,
                 ccBox_lightColor.SelectedColor,
@@ -119,6 +121,7 @@ namespace MyQRCode
         private void SaveFile()
         {
             INIOperatorSys.Write(cfg_full_path, "Config", "requestedVersion", (int)numUpDown_reqVer.Value);
+            INIOperatorSys.Write(cfg_full_path, "Config", "reqVersionAuto", cBox_Auto.Checked);
             INIOperatorSys.Write(cfg_full_path, "Config", "pixelsPerModule", cBox_pixel.SelectedIndex);
             INIOperatorSys.Write(cfg_full_path, "Config", "darkColor", ccBox_darkColor.SelectedColor.ToHexValue());
             INIOperatorSys.Write(cfg_full_path, "Config", "lightColor", ccBox_lightColor.SelectedColor.ToHexValue());
@@ -198,6 +201,11 @@ namespace MyQRCode
         private void QRCWnd_FormClosed(object sender, FormClosedEventArgs e)
         {
             wndImage.Close();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            numUpDown_reqVer.Enabled = cBox_Auto.Checked;
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)

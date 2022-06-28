@@ -25,8 +25,8 @@ namespace MyQRCode
             InitializeComponent();
             cfg_full_path = Path.Combine(base_path, "MyQRCode.ini");
             wndIcon = new QRCWndIcon(cfg_full_path);
-            picture_x = this.Width - this.ClientRectangle.Width + pictureBox1.Location.X;
-            picture_y = this.Height - this.ClientRectangle.Height + pictureBox1.Location.Y;
+            picture_x = this.Width - this.ClientRectangle.Width;
+            picture_y = this.Height - this.ClientRectangle.Height;
             Text = "二维码生成器";
             Icon = Properties.Resources.icon;
         }
